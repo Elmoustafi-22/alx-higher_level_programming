@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
             if c + 1 < l and roman_string[c:c + 2] in roman:
                 v += roman[roman_string[c:c + 2]]
                 c += 2
-        else:
-            v += roman[roman_string[c]]
-	    c += 1
+            else:
+                v += roman[roman_string[c]]
+                c += 1
         return v
