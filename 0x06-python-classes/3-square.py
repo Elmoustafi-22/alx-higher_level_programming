@@ -11,7 +11,7 @@ class Square:
         Args:
              size(int): This size of ther new square.
         """
-        if not isinstancr(size, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an intepreter")
         elif size < 0:
             raise ValueError("size must be >= 0")
