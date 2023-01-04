@@ -3,9 +3,9 @@
 
 
 class Rectangle:
-    """Represent a rectangle.
-    """
+    """Represent a rectangle."""
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle."""
@@ -28,7 +28,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get the height of the Rectangle."""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -56,10 +56,10 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
-        return ("".join(rect))
+            return ("".join(rect))
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
