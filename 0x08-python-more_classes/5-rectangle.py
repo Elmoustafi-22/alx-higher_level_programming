@@ -12,8 +12,8 @@ class Rectangle:
 
     @property
     def width(self):
-       """Get/set the width of the Rectangle."""
-       return self.__width
+        """Get/set the width of the Rectangle."""
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -47,11 +47,10 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return the printable representation of the Rectangle.  
-	"""
+        """Return the printable representation"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        
+
         rect = []
         for i in range(self.__height):
             [rect.append('#') for j in range(self.__width)]
